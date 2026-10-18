@@ -6,13 +6,12 @@
 	<meta name="description" content="Rohirrim Booking Form" >
 	<meta name="keywords"    content="MiddleEarth, Tours, Rohan" >
 	<meta name="author"      content="Grima Wormtongue" />
-    <!-- Place the general style sheet before specific CSS so the specific overides the general formatting-->
+    
 	<link rel="stylesheet" type="text/css" href="style/style.css" >
 	<link rel="stylesheet" type="text/css" href="style/register.css" >	
 </head>
 
 <body>
-
 
 	<header><h1>Rohirrim Dude Ranch</h1></header>
 	<nav>
@@ -26,7 +25,7 @@
 	</nav>
 
 <article>
-<form id="regform" >
+<form id="regform" method="post" action="processbooking.php" novalidate= "novalidate">
 <fieldset id="person"> 
 	<legend>Your details:</legend>
 	<p><label for="firstname">Enter your Firstname</label>
@@ -58,6 +57,8 @@
 		<legend>Booking:</legend>
 			<label for="accom">Accommodation</label>
 			<input type="checkbox" name="accom" id="accom" value="Accomodation" /><br />
+			<label for="1day">One-day Tour</label>
+			<input type="checkbox" name="1day" id="1day" value="1day" /><br />
 			<label for="4day">4 Day Tour</label>
 			<input type="checkbox" name="4day" id="4day" value="4day" /><br />
 			<label for="10day">10 Day Tour</label>
@@ -74,7 +75,7 @@
 		</select>
 	</p>
 	<p>
-	<!-- Firefox does not support the HTML5 date input yet so we need to use text -->
+	
 	<label for="date">Date</label>
 			<input type="text" id="date" name="bookday" maxlength="10" size="10" />
 	</p>
